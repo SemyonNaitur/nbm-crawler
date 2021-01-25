@@ -1,0 +1,19 @@
+<table class="table table-sm table-striped table-hover links">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Links</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="loading">
+            <td colspan="2">
+                <span class="loading-dots">Loading</span>
+            </td>
+        </tr>
+        <tr *ngFor="let path of paths$ | async; index as i" class="link-row">
+            <td>{{i + 1}}</td>
+            <td><a target="_blank" [href]="_site + path">{{path}}</a></td>
+        </tr>
+    </tbody>
+</table>

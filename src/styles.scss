@@ -1,0 +1,15 @@
+html, body { height: 100%; }
+
+.loading-dots::after{
+    animation-name: loadingDots;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    content: '';
+  }
+  @keyframes loadingDots {
+    0%   {content: '.';}
+    33%  {content: '..';}
+    67%  {content: '...';}
+    100% {content: '.';}
+  }

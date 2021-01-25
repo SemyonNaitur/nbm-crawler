@@ -1,0 +1,12 @@
+<h5>Scraped Sites</h5>
+<div class="list-group site-selection mb-3">
+    <div *ngIf="loading">
+        <span class="loading-dots">Loading</span>
+    </div>
+    <ng-container *ngFor="let site of sites">
+        <div class="list-group-item list-group-item-action" [class.active]="selectedSite == site"
+            (click)="onSelect(site)">
+            {{site}}
+        </div>
+    </ng-container>
+</div>

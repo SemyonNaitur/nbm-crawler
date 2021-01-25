@@ -3,12 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// import { MaterialModule } from './material/material.module';
+
+import { SiteSelectionComponent } from './components/site-selection/site-selection.component';
+import { LinksTableComponent } from './components/links-table/links-table.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SiteSelectionComponent,
+    LinksTableComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    // MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

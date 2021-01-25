@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nbm-crawler';
+
+  selectedSite: string;
+
+  onSiteSelected(site: string) {
+    this.selectedSite = site;
+  }
 }
